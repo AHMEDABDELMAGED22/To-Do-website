@@ -1,0 +1,154 @@
+h1{
+Width: 207.2px;
+Height: 45px;
+}
+aside{
+background-color: #FAFAFA;
+height: 750px;
+width: 220px;
+}
+ul{
+list-style: none;
+padding: 0;
+}
+body{
+display: flex;  
+}
+.MyDay{
+display: flex;
+flex-direction: column;
+width: 255.2px;
+height: 93.8px;
+border-bottom: .2px solid rgb(235, 226, 226);
+width: 180px;
+padding-top: 0px;
+padding-bottom: .8px;
+padding-left: 10px;
+padding-right: 24px;
+}
+.header_text{
+position: fixed;     
+top: 12px;       
+left: 300px;    
+}
+li{
+display: flex;
+flex-direction: row;
+Width: 223.2px;
+Height: 40px;
+border-radius: 8px;
+padding-left: 12px;
+Gap: 12px;
+}
+.main_header{
+display: flex;
+flex-direction: row;
+Width: 930.4px;
+Height: 57px;
+justify-content: space-between;
+padding-right: 0px;
+}
+.text{
+position: fixed;
+top: 45px;        
+left: 300px;
+color: rgb(199, 205, 208);
+}
+.icon{
+display: flex;
+position: fixed;
+justify-content: center;
+align-items: center;
+top: 35px;        
+left: 240px;
+width: 50px;
+height: 50px;
+background-color: #6a7ef1;
+border-radius: 10px;
+color: white;
+}
+.add{
+position: fixed;     
+top: 30px;       
+right: 20px;         
+width: 110.3px;
+height: 36px;
+border-radius: 6px;
+background-color: #23d063;
+color: white;
+margin-top: 20px;
+margin-right: 0px;
+}
+.progress{
+border:1px solid #e3e3e3;
+padding-left: 10px;
+width: 1230px;
+height: 80px;
+border-radius: 6px;
+position: fixed;
+top: 120px;       
+left: 250px; 
+font-family: sans-serif;
+}
+.progress_bar{
+position: fixed;
+top: 170px;
+width: 1210px;
+height: 8px;
+border-radius: 10px;
+overflow: hidden;
+background-color: #ffffff; 
+}
+.progress_row{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 8px;
+}
+.complete{
+position: fixed;
+top: 140px;
+right: 45px;
+}
+.today{
+color: #b8b7b7;
+}
+.task{
+border:1px solid #e3e3e3;
+border-radius: 6px;
+position: fixed;
+top: 240px;       
+left: 250px;
+padding-left: 35px;
+font-family: sans-serif; 
+width: 1203px;    
+}
+.front{
+border:1px solid #e3e3e3;
+border-radius: 6px;
+position: fixed;
+top: 350px;       
+left: 250px;
+padding-left: 35px;
+font-family: sans-serif; 
+width: 1203px;
+}
+.checkboxbottun{
+position: fixed;
+top: 278px;
+left: 255px;
+width: 20px;
+}
+.check{
+position: fixed;
+top: 390px;
+left: 255px;
+width: 20px;  
+}
+.star{
+position: fixed;
+top: 280px;
+right: 45px;
+color: orange; 
+background-color: 30px orange; 
+}
