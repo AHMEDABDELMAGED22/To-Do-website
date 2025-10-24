@@ -3,44 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title>ToDoList</title>
 </head>
 <body>
     <aside>
         <div class="MyDay">
-          <h1>MyDay Web</h1>
+            <h1>MyDay Web</h1>
         </div>
-    <nav>
-        <ul>
-            <li> <i class="fa-regular fa-house"></i>My Day</li>
-             <li><i class="fa-regular fa-star"></i>Important</li>
-              <li><i class="fa-regular fa-calendar"></i>Planned</li>
-               <li><i class="fa-solid fa-check"></i>All Tasks</li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li> <i class="fa-regular fa-house"></i>My Day</li>
+                <li><i class="fa-regular fa-star"></i>Important</li>
+                <li><i class="fa-regular fa-calendar"></i>Planned</li>
+                <li><i class="fa-solid fa-check"></i>All Tasks</li>
+            </ul>
+        </nav>
     </aside>
     <main>
         <header class="main_header">
             <div class="header_left">
-            <div class="icon">
-                <i class="fa-regular fa-sun"></i>
+                <div class="icon">
+                    <i class="fa-regular fa-sun"></i>
+                </div>
+                <div class="header_text">
+                    <h2>My Day</h2>
+                    <P class="text">Tuesday, october 7</P>
+                </div>
             </div>
-            <div class="header_text">
-             <h2>My Day</h2>
-            <P class="text">Tuesday, october 7</P>
-            </div>
-            </div>
-            <button class="add"><i class="fa-solid fa-plus"></i>Add Task</button>
+            <button class="add" id="addTaskBtn">
+                <i class="fa-solid fa-plus"></i>Add Task
+            </button>
         </header>
-
     </main>
     <section class="progress">
-      <p class="today">Today's Progress</p>
-      <div class="progress_row"></div>
-      <progress class="progress_bar" value="0" max="2"></progress>
-      <small class="complete">0 of 2 completed</small>
+        <p class="today">Today's Progress</p>
+        <div class="progress_row"></div>
+        <progress class="progress_bar" value="0" max="2"></progress>
+        <small class="complete">0 of 2 completed</small>
     </section>
     <section>
         <div class="task">
@@ -49,11 +50,77 @@
             </div>
             <h3> <input class="checkboxbottun" type="checkbox"> Client meeting preparing </h3>
             <p>Work <i class="fa-regular fa-calendar"></i> Today</p>
-      </div>
+        </div>
         <div class="front">
             <h3> <input class="check" type="checkbox"> Front End Campus </h3>
             <p>Work <i class="fa-regular fa-calendar"></i> Today</p>
-      </div>
+        </div>
     </section>
+
+    <div id="addTaskModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Task</h2>
+                <p>Create a new task with details like priority, tags, and due date</p>
+            </div>
+            
+            <form id="taskForm">
+                <div class="form-group">
+                    <label for="title">Title *</label>
+                    <input type="text" id="title" placeholder="What do you want to do?" required>
+                    <p class="note">Press Enter to add, Shift+Enter to add and stay open</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" placeholder="Add more details..."></textarea>
+                </div>
+                
+                <hr>
+                
+                <div class="form-group">
+                    <label for="dueDate">Due Date</label>
+                    <div class="date-input">
+                        <input type="date" id="dueDate">
+                    </div>
+                    <p class="note">Pick a date or choose Today / Tomorrow</p>
+                </div>
+                
+                <div class="form-group">
+                    <label>Priority</label>
+                    <div class="priority-options">
+                        <div class="priority-option" data-value="low">Low</div>
+                        <div class="priority-option" data-value="medium">Medium</div>
+                        <div class="priority-option" data-value="high">High</div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tags">Tags</label>
+                    <input type="text" id="tags" placeholder="Add tags...">
+                    <div class="tags-input" id="tagsContainer"></div>
+                    <p class="note">Press Enter to add tag. Max 6 tags.</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status">
+                        <option value="todo">To Do</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="done">Done</option>
+                    </select>
+                </div>
+                
+                <hr>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="btn btn-add">Add Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
